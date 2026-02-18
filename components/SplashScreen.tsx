@@ -6,7 +6,7 @@ export default function SplashScreen() {
     const [stage, setStage] = useState<'visible' | 'exiting' | 'hidden'>('visible')
 
     useEffect(() => {
-        // Start exiting after some time
+        
         const exitTimer = setTimeout(() => {
             setStage('exiting')
         }, 2500)
