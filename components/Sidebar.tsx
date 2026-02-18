@@ -149,7 +149,7 @@ export default function Sidebar() {
 
         {/* Download CV Button */}
         <a
-          href="/Abdelrahman-shawky-korayem-CV.pdf"
+          href="/Abdelrahman Korayem_CV.pdf"
           download
           className="block w-full group"
         >

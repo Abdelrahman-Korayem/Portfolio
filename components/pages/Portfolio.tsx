@@ -10,7 +10,7 @@ export default function Portfolio() {
       tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'React Hook Form', 'Zod'],
       description: 'A role-based recycling platform (User/Admin/Company) built on modular React architecture with schema-driven forms, Context API, and full i18n support.',
       image: "assets/Tadweer.png",
-      github: 'https://github.com/yourusername/tadweer',
+      github: 'https://github.com/final-project-team-iti-damanhour/website',
       demo: null,
       highlights: [
         'Role-based authentication system',
