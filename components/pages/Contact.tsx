@@ -49,14 +49,34 @@ export default function Contact() {
 
     setStatus('sending')
 
-    // Simulate API call
-    setTimeout(() => {
-      setStatus('success')
-      setForm({ name: '', email: '', message: '' })
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/koraim23@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: `New message from ${form.name} via Portfolio!`
+        })
+      });
 
-      // Reset success message after 5 seconds
+      if (response.ok) {
+        setStatus('success')
+        setForm({ name: '', email: '', message: '' })
+        setTimeout(() => setStatus('idle'), 5000)
+      } else {
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 5000)
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus('error')
       setTimeout(() => setStatus('idle'), 5000)
-    }, 1500)
+    }
   }
 
   const contactInfo = [
