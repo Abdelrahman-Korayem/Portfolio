@@ -24,7 +24,7 @@ export default function Sidebar() {
     {
       icon: <FaLocationDot />,
       label: 'Location',
-      value: 'Damanhour, Egypt',
+      value: 'Alexandria, Egypt',
       href: null
     }
   ];
